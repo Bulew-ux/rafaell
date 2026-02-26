@@ -6,83 +6,142 @@
     <title>Portofolio UMKM - Dapur Nusantara</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #fdf6f0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f5f2;
             color: #333;
         }
+
         header {
-            background-color: #c0392b;
+            background: linear-gradient(135deg, #c0392b, #922b21);
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
         }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-container svg {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
         nav {
-            background-color: #922b21;
-            padding: 10px;
+            background-color: #7b241c;
+            padding: 12px;
             text-align: center;
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: bold;
         }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         section {
-            padding: 40px 20px;
-            max-width: 1000px;
+            padding: 50px 20px;
+            max-width: 1100px;
             margin: auto;
         }
+
         h2 {
             color: #c0392b;
             margin-bottom: 20px;
         }
+
         .produk-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
+
         .produk {
-            background-color: white;
+            background: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
             text-align: center;
         }
+
         .produk img {
             width: 100%;
             border-radius: 10px;
         }
-        footer {
-            background-color: #922b21;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+
         .btn {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
+            margin-top: 12px;
+            padding: 10px 18px;
             background-color: #c0392b;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
         }
+
         .btn:hover {
             background-color: #922b21;
+        }
+
+        footer {
+            background-color: #7b241c;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Dapur Rafael Sejahtera</h1>
-    <p>UMKM Kuliner Tradisional Indonesia</p>
+    <div class="logo-container">
+        <!-- LOGO BERGAMBAR (Badge + Topi Koki + Api + Sendok Garpu) -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Lingkaran Badge -->
+            <circle cx="100" cy="100" r="95" fill="#ffffff" stroke="#f1c40f" stroke-width="8"/>
+            
+            <!-- Api -->
+            <path d="M100 120 C85 100,110 90,95 70 C120 85,115 105,100 120" 
+                  fill="#e74c3c"/>
+
+            <!-- Topi Koki -->
+            <ellipse cx="100" cy="75" rx="35" ry="20" fill="#ffffff" stroke="#ccc"/>
+            <rect x="70" y="75" width="60" height="25" rx="8" fill="#ffffff" stroke="#ccc"/>
+
+            <!-- Sendok -->
+            <rect x="80" y="105" width="6" height="45" fill="#7b241c"/>
+            <!-- Garpu -->
+            <rect x="114" y="105" width="6" height="45" fill="#7b241c"/>
+
+            <!-- Teks Logo -->
+            <text x="100" y="170" text-anchor="middle" 
+                  font-size="16" fill="#c0392b" font-weight="bold">
+                DAPUR NUSANTARA
+            </text>
+        </svg>
+
+        <h1>Dapur Nusantara</h1>
+        <p>Cita Rasa Tradisional Indonesia</p>
+    </div>
 </header>
 
 <nav>
-    <a href="#tentang">Tentang Kami</a>
+    <a href="#tentang">Tentang</a>
     <a href="#produk">Produk</a>
     <a href="#keunggulan">Keunggulan</a>
     <a href="#kontak">Kontak</a>
@@ -91,9 +150,8 @@
 <section id="tentang">
     <h2>Tentang Kami</h2>
     <p>
-        Dapur Rafael Sejahtera adalah brand UMKM yang bergerak di bidang makanan tradisional khas Indonesia. 
-        Berdiri sejak 2022, kami berkomitmen menghadirkan cita rasa autentik dengan bahan berkualitas 
-        dan tanpa pengawet.
+        Dapur Nusantara adalah brand UMKM kuliner yang menghadirkan makanan khas Indonesia 
+        dengan cita rasa autentik, menggunakan bahan segar dan tanpa pengawet.
     </p>
 </section>
 
@@ -103,23 +161,25 @@
         <div class="produk">
             <img src="https://via.placeholder.com/300x200" alt="Rendang">
             <h3>Rendang Sapi</h3>
-            <p>Rendang khas Minang dengan bumbu rempah pilihan.</p>
-            <p><strong>Rp 45.000</strong></p>
-            <a href="#" class="btn">Pesan Sekarang</a>
+            <p>Rendang khas Minang dengan rempah pilihan.</p>
+            <strong>Rp 45.000</strong><br>
+            <a href="#" class="btn">Pesan</a>
         </div>
+
         <div class="produk">
             <img src="https://via.placeholder.com/300x200" alt="Sambal">
             <h3>Sambal Nusantara</h3>
-            <p>Sambal homemade pedas gurih tanpa pengawet.</p>
-            <p><strong>Rp 20.000</strong></p>
-            <a href="#" class="btn">Pesan Sekarang</a>
+            <p>Sambal homemade pedas gurih.</p>
+            <strong>Rp 20.000</strong><br>
+            <a href="#" class="btn">Pesan</a>
         </div>
+
         <div class="produk">
             <img src="https://via.placeholder.com/300x200" alt="Keripik">
             <h3>Keripik Pisang</h3>
-            <p>Keripik pisang renyah dengan berbagai varian rasa.</p>
-            <p><strong>Rp 15.000</strong></p>
-            <a href="#" class="btn">Pesan Sekarang</a>
+            <p>Keripik renyah berbagai varian rasa.</p>
+            <strong>Rp 15.000</strong><br>
+            <a href="#" class="btn">Pesan</a>
         </div>
     </div>
 </section>
@@ -127,24 +187,23 @@
 <section id="keunggulan">
     <h2>Keunggulan Kami</h2>
     <ul>
-        <li>Bahan segar dan berkualitas</li>
-        <li>Tanpa bahan pengawet</li>
-        <li>Rasa autentik khas Nusantara</li>
+        <li>Bahan berkualitas & higienis</li>
+        <li>Tanpa pengawet</li>
+        <li>Rasa autentik Nusantara</li>
         <li>Harga terjangkau</li>
-        <li>Melayani pemesanan online & offline</li>
     </ul>
 </section>
 
 <section id="kontak">
-    <h2>Informasi Kami</h2>
-    <p>Email: dapursejahtera@gmail.com</p>
+    <h2>Kontak</h2>
+    <p>Email: dapurnusantara@gmail.com</p>
     <p>WhatsApp: 0812-3456-7890</p>
-    <p>Instagram: @dapurrafaelsejahtera</p>
+    <p>Instagram: @dapurnusantara</p>
     <p>Alamat: Ruko Fortune 9, Jl. Graha Raya Bintaro No FB/I-7.</p>
 </section>
 
 <footer>
-    <p>&copy; 2026 Dapur Sejahtera | UMKM Indonesia</p>
+    <p>&copy; 2026 Dapur Nusantara | UMKM Indonesia</p>
 </footer>
 
 </body>
